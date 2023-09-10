@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../contentlayer.config.js"],
+  "sourcesContent": ["\uFEFFimport { makeSource, defineDocumentType } from \"contentlayer/source-files\";\n\nconst Blog = defineDocumentType(() => ({\n  name: \"Blog\",\n  filePathPattern: \"**/**/*.mdx\",\n  fields: {\n    title: {\n      type: \"string\",\n    },\n    publishAt: {\n      type: \"date\",\n    },\n    updatedAt: {\n      type: \"date\",\n    },\n  },\n}));\nexport default makeSource({\n  contentDirPath: \"content\",\n});\n"],
+  "mappings": ";AAAC,SAAS,YAAY,0BAA0B;AAEhD,IAAM,OAAO,mBAAmB,OAAO;AAAA,EACrC,MAAM;AAAA,EACN,iBAAiB;AAAA,EACjB,QAAQ;AAAA,IACN,OAAO;AAAA,MACL,MAAM;AAAA,IACR;AAAA,IACA,WAAW;AAAA,MACT,MAAM;AAAA,IACR;AAAA,IACA,WAAW;AAAA,MACT,MAAM;AAAA,IACR;AAAA,EACF;AACF,EAAE;AACF,IAAO,8BAAQ,WAAW;AAAA,EACxB,gBAAgB;AAClB,CAAC;",
+  "names": []
+}

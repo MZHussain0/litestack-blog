@@ -1,0 +1,27 @@
+{
+  "title": "Blog One Title",
+  "publishedAt": "2023-09-10T00:00:00.000Z",
+  "updatedAt": "2023-09-10T00:00:00.000Z",
+  "description": "This is the description for blog one",
+  "image": "../../public/blogs/carlos-muza-hpjSkU2UYSU-unsplash.jpg",
+  "isPublished": true,
+  "author": "Zakir Hussain",
+  "tags": [
+    "productivity",
+    "apps"
+  ],
+  "body": {
+    "raw": "\n# This is the H1 Element\n\n## This is the H2 Element\n",
+    "html": "<h1>This is the H1 Element</h1>\n<h2>This is the H2 Element</h2>"
+  },
+  "_id": "blog-one/index.mdx",
+  "_raw": {
+    "sourceFilePath": "blog-one/index.mdx",
+    "sourceFileName": "index.mdx",
+    "sourceFileDir": "blog-one",
+    "contentType": "mdx",
+    "flattenedPath": "blog-one"
+  },
+  "type": "Blog",
+  "url": "/blogs/blog-one"
+}

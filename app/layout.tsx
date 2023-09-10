@@ -32,7 +32,7 @@ export default function RootLayout({
         className={cn(
           inter.variable,
           manrope.variable,
-          "bg-primary-foreground text-primary font-manrope"
+          "text-primary font-manrope"
         )}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />

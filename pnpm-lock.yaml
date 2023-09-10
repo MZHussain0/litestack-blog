@@ -19,6 +19,9 @@ dependencies:
   clsx:
     specifier: ^2.0.0
     version: 2.0.0
+  contentlayer:
+    specifier: ^0.3.4
+    version: 0.3.4(esbuild@0.19.2)
   eslint:
     specifier: 8.49.0
     version: 8.49.0

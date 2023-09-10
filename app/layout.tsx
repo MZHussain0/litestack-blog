@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
+import Header from "@/components/Header";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
           "bg-primary-foreground text-primary font-manrope"
         )}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <Header />
           {children}
         </ThemeProvider>
       </body>

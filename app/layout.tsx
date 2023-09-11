@@ -4,6 +4,7 @@ import { Inter, Manrope } from "next/font/google";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { cn } from "@/lib/utils";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -37,6 +38,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

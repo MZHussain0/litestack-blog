@@ -10,7 +10,7 @@ const Header: FC<HeaderProps> = ({}) => {
     <div className=" w-full p-4 px-10 flex items-center justify-between ">
       <Logo />
 
-      <nav className="w-max py-3 px-8 border border-solid border-muted-foreground rounded-full font-medium capitalize flex items-center justify-center gap-x-4 fixed top-6 right-1/2 translate-x-1/2 bg-secondary/80 backdrop-blur-sm">
+      <nav className="w-max py-3 px-8 border border-solid border-muted-foreground rounded-full font-medium capitalize flex items-center justify-center gap-x-4 fixed top-6 right-1/2 translate-x-1/2 bg-secondary/80 backdrop-blur-sm z-50">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
         <Link href="/contact">Contact</Link>

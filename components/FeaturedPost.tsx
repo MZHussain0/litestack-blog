@@ -15,7 +15,7 @@ const FeaturedPost: FC<FeaturedPostProps> = ({ blogs }) => {
       <h2 className="w-full inline-block font-bold capitalize text-4xl">
         Featured Post
       </h2>
-      <div className="grid grid-cols-2 grid-rows-3 gap-6 mt-16">
+      <div className="grid grid-cols-2 grid-rows-2 gap-6 mt-16">
         <article className="col-span-1 row-span-2">
           <BlogLayoutOne blog={sortedBlogs[1]} />
         </article>

@@ -1,19 +1,17 @@
 ﻿import { Blog } from "@/.contentlayer/generated";
+import format from "date-fns/format";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { format } from "date-fns";
 
-interface BlogLayoutTwoProps {
+interface BlogLayoutThreeProps {
   blog: Blog;
 }
 
-const BlogLayoutTwo: FC<BlogLayoutTwoProps> = ({ blog }) => {
+const BlogLayoutThree: FC<BlogLayoutThreeProps> = ({ blog }) => {
   return (
-    <div className="group grid grid-cols-12 gap-4 items-center">
-      <Link
-        href={blog.url}
-        className="col-span-4 h-full rounded-xl overflow-hidden">
+    <div className="group flex flex-col items-center">
+      <Link href={blog.url} className="h-full rounded-xl overflow-hidden">
         <Image
           src={blog.image?.filePath.replace("../public", "")}
           alt={blog.title}
@@ -21,11 +19,11 @@ const BlogLayoutTwo: FC<BlogLayoutTwoProps> = ({ blog }) => {
           blurDataURL={blog.image.blurhashDataUrl}
           width={blog.image.width}
           height={blog.image.height}
-          className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 ease transition-all duration-500"
+          className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500 ease"
         />
       </Link>
 
-      <div className="col-span-8">
+      <div className="w-full flex flex-col mt-4">
         <span className="uppercase font-semibold text-sm text-yellow-400">
           {blog.tags?.[0]}
         </span>
@@ -45,4 +43,4 @@ const BlogLayoutTwo: FC<BlogLayoutTwoProps> = ({ blog }) => {
   );
 };
 
-export default BlogLayoutTwo;
+export default BlogLayoutThree;

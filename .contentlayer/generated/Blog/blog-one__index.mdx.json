@@ -3,7 +3,15 @@
   "publishedAt": "2023-09-10T00:00:00.000Z",
   "updatedAt": "2023-09-10T00:00:00.000Z",
   "description": "This is the description for blog one",
-  "image": "../../public/blogs/carlos-muza-hpjSkU2UYSU-unsplash.jpg",
+  "image": {
+    "filePath": "../public/blogs/carlos-muza-hpjSkU2UYSU-unsplash.jpg",
+    "relativeFilePath": "../../public/blogs/carlos-muza-hpjSkU2UYSU-unsplash.jpg",
+    "format": "jpeg",
+    "height": 1368,
+    "width": 1920,
+    "aspectRatio": 1.4035087719298245,
+    "blurhashDataUrl": "data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABCUlEQVR4nB3MS0pCUQCA4bOSnKpk2DVNDxKFTjShogcohdfMJ6kJldkgGoSjKAhLQ8uk8IZpFEWDFmAROJKgIqhB0DL+oA18onRQ5mi3SNBmJmTVkxyxkPM4WFiMMiaNiLNKndu7Zwq1KNXWNyb9AHmvZCmeRWueIxp1jSEZ4O3zl97HD52XV/bjfkKRNNc3bcRVo4XBNIlarBHYO2Zmp8DmuItAMMyFdoowD9roM3np9r7+hafuOyeqG+l0cFgpIRSLndVEjH6jFUVxMuuPMDosya1tkMmkEFv5bZrtex4eO5Srl0xNqyzHUvh8c6znsoh0IoNOZ8CvJglGV5gPp5hQjLjcHqS08wdccZYYY5mrbAAAACt0RVh0Q3JlYXRpb24gVGltZQBNb24sIDExIFNlcCAyMDIzIDA1OjI2OjIwIEdNVH71VTsAAAAudEVYdFNvZnR3YXJlAGdpdGh1Yi5jb20vbWF0bWVuL0ltYWdlU2NyaXB0IHYxLjIuMTbo2b2GAAAAAElFTkSuQmCC"
+  },
   "isPublished": true,
   "author": "Zakir Hussain",
   "tags": [

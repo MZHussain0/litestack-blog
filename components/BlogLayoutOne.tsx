@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FC } from "react";
 import Tag from "./Tag";
 import Link from "next/link";
+import { slug } from "github-slugger";
 
 interface BlogLayoutOneProps {
   blog: Blog;
@@ -24,7 +25,7 @@ const BlogLayoutOne: FC<BlogLayoutOneProps> = ({ blog }) => {
 
       <div className="w-full absolute bottom-0 p-10 z-20">
         <Tag
-          link={`/categories/${blog.tags?.[0]}`}
+          link={blog?.tags && `/categories/${slug(blog?.tags?.[0])}`}
           name={blog.tags?.[0]}
           classes="px-6 text-sm py-2 border"
         />

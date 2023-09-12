@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypePrettyCode from "rehype-pretty-code";
+import githubSlugger from "github-slugger";
 var Blog = defineDocumentType(() => ({
   name: "Blog",
   filePathPattern: "**/**/*.mdx",
@@ -51,6 +52,25 @@ var Blog = defineDocumentType(() => ({
     readingTime: {
       type: "json",
       resolve: (doc) => readingTime(doc.body.raw)
+    },
+    toc: {
+      type: "json",
+      resolve: async (doc) => {
+        const regularExp = /\n(?<flag>#{1,6})\s+(?<content>.+)/g;
+        const slugger = new githubSlugger();
+        const headings = Array.from(doc.body.raw.matchAll(regularExp)).map(
+          ({ groups }) => {
+            const flag = groups?.flag;
+            const content = groups?.content;
+            return {
+              level: flag?.length === 1 ? "one" : flag?.length === 2 ? "two" : "three",
+              text: content,
+              slug: content ? slugger.slug(content) : void 0
+            };
+          }
+        );
+        return headings;
+      }
     }
   }
 }));
@@ -73,4 +93,4 @@ var contentlayer_config_default = makeSource({
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-CBQ4Q6EP.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-K7IHOKP7.mjs.map

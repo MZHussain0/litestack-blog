@@ -10,7 +10,7 @@ interface FeaturedPostProps {
 const RecentPost: FC<FeaturedPostProps> = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   return (
-    <section className="w-full mt-32 px-32 flex flex-col items-center justify-center">
+    <section className="w-full mt-16 sm:mt-24 md:mt-28 lg:mt-32 px-8 sm:px-10 md:px-16 lg:px-24 xl:px-32  flex flex-col items-center justify-center">
       <div className="w-full flex justify-between">
         <h2 className="inline-block font-bold capitalize text-4xl">
           Recent Posts
@@ -22,7 +22,7 @@ const RecentPost: FC<FeaturedPostProps> = ({ blogs }) => {
         </Link>
       </div>
 
-      <div className="grid grid-cols-3 gap-16 mt-16">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 sm:gap-12 md:gap-14 lg:gap-16 mt-16">
         {sortedBlogs.slice(4, 10).map((blog: Blog) => (
           <div className="col-span-1 row-span-1 relative" key={blog._id}>
             <BlogLayoutThree blog={blog} />

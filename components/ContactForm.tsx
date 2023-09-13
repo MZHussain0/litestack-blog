@@ -14,7 +14,7 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="mt-12 font-medium text-xl leading-relaxed font-inter">
+      className=" mt-4 sm:mt-8 md:mt-12 font-medium text-lg  md:text-xl leading-relaxed font-inter">
       Hello! My name is{" "}
       <input
         type="text"
@@ -47,7 +47,7 @@ export default function ContactForm() {
         className="w-full outline-none border p-0 mx-2 focus:ring-0 placeholder:text-lg bg-transparent border-b"
       />
       <button
-        className="inline-block mt-8 px-8 py-4 bg-yellow-400 font-medium text-xl text-secondary rounded-lg cursor-pointer"
+        className="inline-block mt-4 md:mt-8 px-4 md:px-8 py-2 md:py-4 bg-yellow-400 font-medium text-lg md:text-xl text-secondary rounded-lg cursor-pointer"
         type="submit">
         Send Request
       </button>

@@ -7,7 +7,7 @@ interface LogoProps {}
 const Logo: FC<LogoProps> = ({}) => {
   return (
     <Link href="/" className="flex items-center">
-      <div className="w-16 rounded-full overflow-hidden">
+      <div className="md:w-16 w-12 md:mr-4 mr-2 rounded-full overflow-hidden">
         <Image
           src="/logo.png"
           alt="liteStack"
@@ -16,7 +16,7 @@ const Logo: FC<LogoProps> = ({}) => {
           className="object-contain"
         />
       </div>
-      <span className="font-bold text-2xl text-accent-foreground">
+      <span className="font-bold text-xl md:text-2xl text-accent-foreground">
         litStack
       </span>
     </Link>

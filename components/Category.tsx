@@ -19,7 +19,7 @@ const Category: FC<CategoryProps> = ({
     <Link
       href={link}
       className={cn(
-        "inline-block py-3 px-10 rounded-full  border border-solid border-secondary-foreground hover:scale-105 transition-all duration-200 ease",
+        "py-3 px-4 sm:px-6 md:px-10 rounded-lg  border border-solid border-secondary-foreground hover:bg-muted hover:scale-105 transition-all duration-200 ease",
         className,
         active ? "bg-primary text-secondary" : "bg-transparent"
       )}>

@@ -19,7 +19,7 @@ const BlogLayoutThree: FC<BlogLayoutThreeProps> = ({ blog }) => {
           blurDataURL={blog.image.blurhashDataUrl}
           width={blog.image.width}
           height={blog.image.height}
-          className="aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500 ease"
+          className=" aspect-auto lg:aspect-[4/3] w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-500 ease"
         />
       </Link>
 

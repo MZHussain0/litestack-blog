@@ -23,14 +23,14 @@ const BlogLayoutOne: FC<BlogLayoutOneProps> = ({ blog }) => {
         className="w-full h-full object-cover object-center rounded-xl group-hover:scale-105 transition ease duration-500"
       />
 
-      <div className="w-full absolute bottom-0 p-10 z-20">
+      <div className="w-full absolute bottom-0 p-4 sm:p-8 lg:p-10 z-20">
         <Tag
           link={blog?.tags && `/categories/${slug(blog?.tags?.[0])}`}
           name={blog.tags?.[0]}
-          classes="px-6 text-sm py-2 border"
+          className="px-6 text-sm py-2 border"
         />
         <Link href={blog.url} className="">
-          <h2 className="font-bold capitalize text-2xl mt-4">
+          <h2 className="font-bold capitalize text-xl sm:text-2xl mt-4">
             <span className="bg-gradient-to-r from-yellow-400 to-yellow-500 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition=[background-size] duration-500">
               {blog.title}
             </span>

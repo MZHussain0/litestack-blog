@@ -11,11 +11,11 @@ interface FeaturedPostProps {
 const FeaturedPost: FC<FeaturedPostProps> = ({ blogs }) => {
   const sortedBlogs = sortBlogs(blogs);
   return (
-    <section className="w-full mt-32 px-32 flex flex-col items-center justify-center">
+    <section className="w-full mt-20 sm:mt-24 md:mt-28 lg:mt-32 px-6 sm:px-10 lg:px-32 flex flex-col items-center justify-center">
       <h2 className="w-full inline-block font-bold capitalize text-4xl">
         Featured Post
       </h2>
-      <div className="grid grid-cols-2 grid-rows-2 gap-6 mt-16">
+      <div className="grid grid-cols-1 lg:grid-cols-2 grid-rows-1 lg:grid-rows-2 gap-6 mt-8 sm:mt-16">
         <article className="col-span-1 row-span-2">
           <BlogLayoutOne blog={sortedBlogs[1]} />
         </article>

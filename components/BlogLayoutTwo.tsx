@@ -21,15 +21,15 @@ const BlogLayoutTwo: FC<BlogLayoutTwoProps> = ({ blog }) => {
           blurDataURL={blog.image.blurhashDataUrl}
           width={blog.image.width}
           height={blog.image.height}
-          className="aspect-square w-full h-full object-cover object-center group-hover:scale-105 ease transition-all duration-500"
+          className="hidden md:block aspect-square w-full h-full object-cover object-center group-hover:scale-105 ease transition-all duration-500"
         />
       </Link>
 
-      <div className="col-span-8">
+      <div className="col-span-12 md:col-span-8">
         <span className="uppercase font-semibold text-sm text-yellow-400">
           {blog.tags?.[0]}
         </span>
-        <Link href={blog.url} className="inline-block my-1">
+        <Link href={blog.url} className="block my-1">
           <h2 className="font-semibold capitalize text-lg">
             <span className="bg-gradient-to-r from-yellow-400/70 to-yellow-400/70 bg-[length:0px_6px] group-hover:bg-[length:100%_6px] bg-left-bottom bg-no-repeat transition=[background-size] duration-500">
               {blog.title}

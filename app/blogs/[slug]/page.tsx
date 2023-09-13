@@ -75,7 +75,7 @@ export default function Page({ params }: pageProps) {
                 link={blog?.tags && `/categories/${slug(blog?.tags?.[0])}`}
                 className="px-6 text-sm py-2 border"
               />
-              <h1 className="block mt-6 font-semibold capitalize text-5xl leading-normal relative w-[5/6]">
+              <h1 className="block mt-6 font-semibold capitalize text-2xl md:text-3xl lg:text-5xl leading-normal relative w-[5/6]">
                 {blog?.title}
               </h1>
             </div>
@@ -95,11 +95,9 @@ export default function Page({ params }: pageProps) {
           </div>
           <BlogDetails blog={blog} slug={params.slug} />
 
-          <div className="grid grid-cols-12 gap-16 mt-8 px-10">
-            <div className="col-span-4">
-              <details
-                className="border border-yellow-400 rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto bg-muted"
-                open>
+          <div className="grid grid-cols-12 gap-y-8 lg:gap-8 xl:gap-16 mt-8 px-5 sm:px-10">
+            <div className=" col-span-12 lg:col-span-4">
+              <details className="border border-yellow-400 rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto bg-muted">
                 <summary className="text-lg font-semibold capitalize cursor-pointer">
                   Table of Content
                 </summary>
@@ -129,7 +127,7 @@ export default function Page({ params }: pageProps) {
                 </ul>
               </details>
             </div>
-            <div className="col-span-8">
+            <div className=" col-span-12 lg:col-span-8">
               <RenderMdx blog={blog} />
             </div>
           </div>

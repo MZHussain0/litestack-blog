@@ -13,7 +13,7 @@ interface BlogDetailsProps {
 
 const BlogDetails: FC<BlogDetailsProps> = ({ blog, slug: blogSlug }) => {
   return (
-    <div className="px-10 bg-yellow-400 text-secondary py-2 flex items-center justify-around flex-wrap text-xl font-medium mx-10 rounded-lg">
+    <div className=" px-2 md:px-10 bg-yellow-400 text-secondary py-2 flex items-center justify-around flex-wrap  text-lg sm:text-xl gap-2 font-medium mx-5 md:mx-10 rounded-lg">
       <time>{format(parseISO(blog.publishedAt), "LLLL d, yyyy")}</time>
       <span>
         <ViewCounter slug={blogSlug} />

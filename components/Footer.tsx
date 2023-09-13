@@ -14,20 +14,19 @@ const Footer: FC<FooterProps> = ({}) => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data: FieldValues) => console.log(data);
-  console.log(errors);
   return (
-    <footer className="mt-16 rounded-2xl bg-muted m-10 flex flex-col items-center">
-      <h3 className="mt-16 font-medium text-4xl text-center capitalize px-4">
+    <footer className="mt-16 rounded-2xl bg-muted  m-5  sm:m-10 flex flex-col items-center">
+      <h3 className="mt-16 font-medium text-2xl  md:text-3xl lg:text-4xl text-center capitalize px-4">
         Interesting Stories | Updates | Guides{" "}
       </h3>
-      <p className="mt-5 px-4 text-center w-3/5 text-muted-foreground">
+      <p className="mt-5 px-4 text-center w-full sm:w-3/5 text-muted-foreground">
         Subscribe to learn about new technology and updates. Join over 5000+
         members community to stay up to date with latest news.
       </p>
 
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="mt-6 min-w-[384px] flex items-stretch bg-secondary-foreground p-2 rounded mx-4">
+        className="mt-6 flex max-w-[384px] items-stretch bg-secondary-foreground p-2 rounded mx-4 flex-col sm:flex-row">
         <input
           type="text"
           placeholder="Enter your Email"
@@ -60,14 +59,14 @@ const Footer: FC<FooterProps> = ({}) => {
         </a>
       </div>
 
-      <div className="w-full mt-16 relative font-medium border-t border-solid border-primary py-6 px-8 flex flex-row items-center justify-between">
+      <div className="w-full mt-16 relative font-medium border-t border-solid border-primary py-6 px-8 flex flex-row flex-wrap gap-4 items-center justify-between">
         <span>© 2023 Zaknightly. All rights reserved.</span>
         <Link href={"/sitemap.xml"} className="text-center underline">
           {" "}
           Sitemap.xml{" "}
         </Link>
         <div className="">
-          Nade with &hearts; by{" "}
+          Made with &hearts; by{" "}
           <a
             href="https://mzhussain.vercel.app"
             target="_blank"

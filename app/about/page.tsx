@@ -12,10 +12,10 @@ export const metadata = {
 
 const AboutPage: FC<pageProps> = ({}) => {
   return (
-    <section>
+    <section className="">
       <AboutCoverPage />
       <Skills />
-      <h2 className="mt-8 font-semibold text-2xl self-start mx-20">
+      <h2 className="mt-8 font-semibold text-lg sm:text-xl lg:text-2xl text-center sm:self-start mx-5 sm:mx-10 md:mx-1.5 xl:mx-20">
         Have a project in mind? Reach out to me 📞 from{" "}
         <Link href="/contact" className="!underline text-yellow-400">
           here

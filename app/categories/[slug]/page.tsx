@@ -6,6 +6,10 @@ import { FC } from "react";
 
 const slugger = new GithubSlugger();
 
+interface pageProps {
+  params: { slug: string };
+}
+
 export async function generateStaticParams() {
   const categories: string[] = [];
   const paths = [{ slug: "all" }];
@@ -24,9 +28,20 @@ export async function generateStaticParams() {
 
   return paths;
 }
+export async function generateMetadata({ params }: pageProps) {
+  return {
+    title: `#${
+      params.slug === "all"
+        ? "Everything Web Development"
+        : params.slug.replace("-", " ")
+    } blogs`,
 
-interface pageProps {
-  params: { slug: string };
+    description: `Explore more about ${
+      params.slug === "all" ? "Web Development" : params.slug.replace("-", " ")
+    } blogs and learn from the collections of ${
+      params.slug
+    } blogs and tutorials`,
+  };
 }
 
 const page: FC<pageProps> = ({ params }) => {

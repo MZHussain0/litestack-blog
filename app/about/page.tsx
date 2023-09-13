@@ -5,6 +5,11 @@ import { FC } from "react";
 
 interface pageProps {}
 
+export const metadata = {
+  title: "About Me | LiteStack",
+  description: "Some details about LiteStack",
+};
+
 const AboutPage: FC<pageProps> = ({}) => {
   return (
     <section>

@@ -1,7 +1,8 @@
-﻿import { Blog, allBlogs } from "@/.contentlayer/generated";
+﻿import { Blog, ImageFieldData, allBlogs } from "@/.contentlayer/generated";
 import BlogDetails from "@/components/BlogDetails";
 import RenderMdx from "@/components/RenderMdx";
 import Tag from "@/components/Tag";
+import { metaData } from "@/lib/metaData";
 import { slug } from "github-slugger";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -13,6 +14,52 @@ interface pageProps {
 
 export async function generateStaticParams() {
   return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
+}
+
+export async function generateMetadata({ params }: pageProps) {
+  const blog = allBlogs.find((blog) => blog._raw.flattenedPath === params.slug);
+
+  if (!blog) return;
+  const publishedAt = new Date(blog?.publishedAt).toISOString();
+  const updatedAt = new Date(blog?.updatedAt || blog.publishedAt).toISOString();
+  let imageList = [metaData.socialBanner];
+  if (blog.image) {
+    if (typeof blog.image.filePath === "string") {
+      imageList = [
+        metaData.siteUrl + blog.image.filePath.replace("../public", ""),
+      ];
+    } else {
+      imageList;
+    }
+  }
+
+  const ogImages = imageList.map((img) => {
+    return { url: img.includes("http") ? img : metaData.siteUrl + img };
+  });
+
+  const auhtors = blog.author ? [blog.author] : metaData.author;
+  return {
+    title: blog.title,
+    description: blog.description,
+    openGraph: {
+      title: blog.title,
+      description: blog.description,
+      url: metaData.siteUrl + blog.url,
+      siteName: metaData.title,
+      locale: "en_US",
+      type: "article",
+      publishedTime: publishedAt,
+      modifiedTime: updatedAt,
+      images: ogImages,
+      auhthors: auhtors.length > 0 ? auhtors : [metaData.author],
+      twitter: {
+        card: "summary_large_image",
+        title: blog.title,
+        description: blog.description,
+        images: ogImages,
+      },
+    },
+  };
 }
 
 export default function Page({ params }: pageProps) {

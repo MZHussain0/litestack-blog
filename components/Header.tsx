@@ -2,6 +2,7 @@
 import Logo from "./Logo";
 import Link from "next/link";
 import { Linkedin, Github, Twitter } from "lucide-react";
+import { metaData } from "@/lib/metaData";
 
 interface HeaderProps {}
 
@@ -18,17 +19,17 @@ const Header: FC<HeaderProps> = ({}) => {
 
       <div className="flex items-center justify-center gap-x-6">
         <a
-          href=""
+          href={metaData.github}
           className="text-muted-foreground hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Github className="w-6 h-6" strokeWidth={2} />
         </a>
         <a
-          href=""
+          href={metaData.linkedin}
           className="text-muted-foreground hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Linkedin className="w-6 h-6" strokeWidth={2} />
         </a>
         <a
-          href=""
+          href={metaData.twitter}
           className="text-muted-foreground hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Twitter className="w-6 h-6" strokeWidth={2} />
         </a>

@@ -4,6 +4,11 @@ import { FC } from "react";
 
 interface pageProps {}
 
+export const metadata = {
+  title: "Contact Me | LiteStack",
+  description:
+    "Contact through email or phone for collaberatiion or for hiring",
+};
 const ContactPage: FC<pageProps> = ({}) => {
   return (
     <section className="w-full h-[75vh] flex flex-row items-center justify-center">

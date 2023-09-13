@@ -1,4 +1,5 @@
 ﻿"use client";
+import { metaData } from "@/lib/metaData";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
 import { FC } from "react";
@@ -43,17 +44,17 @@ const Footer: FC<FooterProps> = ({}) => {
 
       <div className="my-8 flex items-center justify-center gap-x-6">
         <a
-          href=""
+          href={metaData.github}
           className="text-white bg-black px-4 py-3 rounded-xl hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Github className="w-7 h-7" strokeWidth={2} />
         </a>
         <a
-          href=""
+          href={metaData.linkedin}
           className="text-white bg-black px-4 py-3 rounded-xl hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Linkedin className="w-7 h-7" strokeWidth={2} />
         </a>
         <a
-          href=""
+          href={metaData.twitter}
           className="text-white bg-black px-4 py-3 rounded-xl  hover:text-primary hover:scale-105 hover:-translate-y-[2px] transition-all duration-300 ease">
           <Twitter className="w-7 h-7" strokeWidth={2} />
         </a>
